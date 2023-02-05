@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'features/presentation/pages/credential/sign_up_page.dart';
+import 'features/presentation/page/credential/sign_up_page.dart';
 
 void main() {
   runApp(MyApp());

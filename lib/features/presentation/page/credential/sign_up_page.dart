@@ -2,12 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pettyland/consts.dart';
-import 'package:pettyland/features/presentation/pages/credential/sign_up_page.dart';
+import 'package:pettyland/features/presentation/page/credential/sign_in_page.dart';
 import 'package:pettyland/features/presentation/widgets/button_container_widget.dart';
 import 'package:pettyland/features/presentation/widgets/form_container_widget.dart';
 
-class SignInPage extends StatelessWidget {
-  const SignInPage({Key? key}) : super(key: key);
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,36 @@ class SignInPage extends StatelessWidget {
               "assets/ic_instagram.svg",
               color: primaryColor,
             )),
+            sizeVer(15),
+            Center(
+              child: Stack(
+                children: [
+                  Container(
+                    width: 60,
+                    height: 60,
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(30)),
+                    child: Image.asset("assets/profile_default.png"),
+                  ),
+                  Positioned(
+                    right: -10,
+                    bottom: -15,
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.add_a_photo,
+                        color: blueColor,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
             sizeVer(30),
+            FormContainerWidget(
+              hintText: "Username",
+            ),
+            sizeVer(15),
             FormContainerWidget(
               hintText: "Email",
             ),
@@ -37,9 +66,13 @@ class SignInPage extends StatelessWidget {
               isPasswordField: true,
             ),
             sizeVer(15),
+            FormContainerWidget(
+              hintText: "Bio",
+            ),
+            sizeVer(15),
             ButtonContainerWidget(
               color: blueColor,
-              text: "Sign In",
+              text: "Sign Up",
               onTapListener: () {},
             ),
             Flexible(
@@ -53,18 +86,18 @@ class SignInPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Don't have and account? ",
+                  "Already have an account? ",
                   style: TextStyle(color: primaryColor),
                 ),
                 InkWell(
                   onTap: () {
                     Navigator.pushAndRemoveUntil(
                         context,
-                        MaterialPageRoute(builder: (context) => SignUpPage()),
+                        MaterialPageRoute(builder: (context) => SignInPage()),
                         (route) => false);
                   },
                   child: Text(
-                    "Sign Up.",
+                    "Sign In.",
                     style: TextStyle(
                         fontWeight: FontWeight.bold, color: primaryColor),
                   ),
