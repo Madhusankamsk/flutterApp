@@ -17,7 +17,7 @@ class _CommentPageState extends State<CommentPage> {
       backgroundColor: backGroundColor,
       appBar: AppBar(
         backgroundColor: backGroundColor,
-        title: Text("Comments"),
+        title: const Text("Comments"),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -32,7 +32,7 @@ class _CommentPageState extends State<CommentPage> {
                     Container(
                       width: 40,
                       height: 40,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: secondaryColor, shape: BoxShape.circle),
                     ),
                     sizeHor(10),
@@ -46,7 +46,7 @@ class _CommentPageState extends State<CommentPage> {
                   ],
                 ),
                 sizeVer(10),
-                Text(
+                const Text(
                   "This is very beautiful place",
                   style: TextStyle(color: primaryColor),
                 ),
@@ -54,20 +54,20 @@ class _CommentPageState extends State<CommentPage> {
             ),
           ),
           sizeVer(10),
-          Divider(
+          const Divider(
             color: secondaryColor,
           ),
           sizeVer(10),
           Expanded(
             child: Container(
-              margin: EdgeInsets.symmetric(horizontal: 10),
+              margin: const EdgeInsets.symmetric(horizontal: 10),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                     width: 40,
                     height: 40,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         color: secondaryColor, shape: BoxShape.circle),
                   ),
                   sizeHor(10),
@@ -95,14 +95,14 @@ class _CommentPageState extends State<CommentPage> {
                             ],
                           ),
                           sizeVer(4),
-                          Text(
+                          const Text(
                             "This is comment",
                             style: TextStyle(color: primaryColor),
                           ),
                           sizeVer(4),
                           Row(
                             children: [
-                              Text(
+                              const Text(
                                 "08/07/2022",
                                 style: TextStyle(
                                     color: darkGreyColor, fontSize: 12),
@@ -114,13 +114,13 @@ class _CommentPageState extends State<CommentPage> {
                                       _isUserReplaying = !_isUserReplaying;
                                     });
                                   },
-                                  child: Text(
+                                  child: const Text(
                                     "Replay",
                                     style: TextStyle(
                                         color: darkGreyColor, fontSize: 12),
                                   )),
                               sizeHor(15),
-                              Text(
+                              const Text(
                                 "View Replays",
                                 style: TextStyle(
                                     color: darkGreyColor, fontSize: 12),
@@ -132,10 +132,10 @@ class _CommentPageState extends State<CommentPage> {
                               ? Column(
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
-                                    FormContainerWidget(
+                                    const FormContainerWidget(
                                         hintText: "Post your replay..."),
                                     sizeVer(10),
-                                    Text(
+                                    const Text(
                                       "Post",
                                       style: TextStyle(color: blueColor),
                                     )
@@ -178,13 +178,13 @@ class _CommentPageState extends State<CommentPage> {
             sizeHor(10),
             Expanded(
                 child: TextFormField(
-              style: TextStyle(color: primaryColor),
-              decoration: InputDecoration(
+              style: const TextStyle(color: primaryColor),
+              decoration: const InputDecoration(
                   border: InputBorder.none,
                   hintText: "Post your comment...",
                   hintStyle: TextStyle(color: secondaryColor)),
             )),
-            Text(
+            const Text(
               "Post",
               style: TextStyle(fontSize: 15, color: blueColor),
             )

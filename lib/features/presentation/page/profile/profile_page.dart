@@ -11,7 +11,7 @@ class ProfilePage extends StatelessWidget {
         backgroundColor: backGroundColor,
         appBar: AppBar(
           backgroundColor: backGroundColor,
-          title: Text(
+          title: const Text(
             "Username",
             style: TextStyle(color: primaryColor),
           ),
@@ -30,14 +30,14 @@ class ProfilePage extends StatelessWidget {
                                   color: backGroundColor.withOpacity(.8)),
                               child: SingleChildScrollView(
                                 child: Container(
-                                  margin: EdgeInsets.symmetric(vertical: 10),
+                                  margin:
+                                      const EdgeInsets.symmetric(vertical: 10),
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(left: 10.0),
+                                      const Padding(
+                                        padding: EdgeInsets.only(left: 10.0),
                                         child: Text(
                                           "More Options",
                                           style: TextStyle(
@@ -46,14 +46,14 @@ class ProfilePage extends StatelessWidget {
                                               color: primaryColor),
                                         ),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         height: 8,
                                       ),
-                                      Divider(
+                                      const Divider(
                                         thickness: 1,
                                         color: secondaryColor,
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         height: 8,
                                       ),
                                       Padding(
@@ -65,9 +65,9 @@ class ProfilePage extends StatelessWidget {
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        EditProfilePage()));
+                                                        const EditProfilePage()));
                                           },
-                                          child: Text(
+                                          child: const Text(
                                             "Edit Profile",
                                             style: TextStyle(
                                                 fontWeight: FontWeight.w500,
@@ -77,14 +77,13 @@ class ProfilePage extends StatelessWidget {
                                         ),
                                       ),
                                       sizeVer(7),
-                                      Divider(
+                                      const Divider(
                                         thickness: 1,
                                         color: secondaryColor,
                                       ),
                                       sizeVer(7),
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(left: 10.0),
+                                      const Padding(
+                                        padding: EdgeInsets.only(left: 10.0),
                                         child: Text(
                                           "Logout",
                                           style: TextStyle(
@@ -102,7 +101,7 @@ class ProfilePage extends StatelessWidget {
                           });
                     }
                   },
-                  child: Icon(
+                  child: const Icon(
                     Icons.menu,
                     color: primaryColor,
                   )),
@@ -121,21 +120,21 @@ class ProfilePage extends StatelessWidget {
                     Container(
                       width: 80,
                       height: 80,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: secondaryColor, shape: BoxShape.circle),
                     ),
                     Row(
                       children: [
                         Column(
                           children: [
-                            Text(
+                            const Text(
                               "0",
                               style: TextStyle(
                                   color: primaryColor,
                                   fontWeight: FontWeight.bold),
                             ),
                             sizeVer(8),
-                            Text(
+                            const Text(
                               "Posts",
                               style: TextStyle(color: primaryColor),
                             )
@@ -144,14 +143,14 @@ class ProfilePage extends StatelessWidget {
                         sizeHor(25),
                         Column(
                           children: [
-                            Text(
+                            const Text(
                               "54",
                               style: TextStyle(
                                   color: primaryColor,
                                   fontWeight: FontWeight.bold),
                             ),
                             sizeVer(8),
-                            Text(
+                            const Text(
                               "Followers",
                               style: TextStyle(color: primaryColor),
                             )
@@ -160,14 +159,14 @@ class ProfilePage extends StatelessWidget {
                         sizeHor(25),
                         Column(
                           children: [
-                            Text(
+                            const Text(
                               "123",
                               style: TextStyle(
                                   color: primaryColor,
                                   fontWeight: FontWeight.bold),
                             ),
                             sizeVer(8),
-                            Text(
+                            const Text(
                               "Following",
                               style: TextStyle(color: primaryColor),
                             )
@@ -178,13 +177,13 @@ class ProfilePage extends StatelessWidget {
                   ],
                 ),
                 sizeVer(10),
-                Text(
+                const Text(
                   "Name",
                   style: TextStyle(
                       color: primaryColor, fontWeight: FontWeight.bold),
                 ),
                 sizeVer(10),
-                Text(
+                const Text(
                   "The bio of user",
                   style: TextStyle(color: primaryColor),
                 ),
@@ -193,10 +192,11 @@ class ProfilePage extends StatelessWidget {
                     itemCount: 32,
                     physics: ScrollPhysics(),
                     shrinkWrap: true,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
-                        crossAxisSpacing: 5,
-                        mainAxisSpacing: 5),
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 3,
+                            crossAxisSpacing: 5,
+                            mainAxisSpacing: 5),
                     itemBuilder: (context, index) {
                       return Container(
                         width: 100,

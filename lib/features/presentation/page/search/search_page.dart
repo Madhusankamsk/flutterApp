@@ -37,10 +37,11 @@ class _SearchPageState extends State<SearchPage> {
                     itemCount: 32,
                     physics: ScrollPhysics(),
                     shrinkWrap: true,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
-                        crossAxisSpacing: 5,
-                        mainAxisSpacing: 5),
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 3,
+                            crossAxisSpacing: 5,
+                            mainAxisSpacing: 5),
                     itemBuilder: (context, index) {
                       return Container(
                         width: 100,

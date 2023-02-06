@@ -43,7 +43,7 @@ class SignUpPage extends StatelessWidget {
                     bottom: -15,
                     child: IconButton(
                       onPressed: () {},
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.add_a_photo,
                         color: blueColor,
                       ),
@@ -53,20 +53,20 @@ class SignUpPage extends StatelessWidget {
               ),
             ),
             sizeVer(30),
-            FormContainerWidget(
+            const FormContainerWidget(
               hintText: "Username",
             ),
             sizeVer(15),
-            FormContainerWidget(
+            const FormContainerWidget(
               hintText: "Email",
             ),
             sizeVer(15),
-            FormContainerWidget(
+            const FormContainerWidget(
               hintText: "Password",
               isPasswordField: true,
             ),
             sizeVer(15),
-            FormContainerWidget(
+            const FormContainerWidget(
               hintText: "Bio",
             ),
             sizeVer(15),
@@ -79,13 +79,13 @@ class SignUpPage extends StatelessWidget {
               child: Container(),
               flex: 2,
             ),
-            Divider(
+            const Divider(
               color: secondaryColor,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   "Already have an account? ",
                   style: TextStyle(color: primaryColor),
                 ),
@@ -93,10 +93,11 @@ class SignUpPage extends StatelessWidget {
                   onTap: () {
                     Navigator.pushAndRemoveUntil(
                         context,
-                        MaterialPageRoute(builder: (context) => SignInPage()),
+                        MaterialPageRoute(
+                            builder: (context) => const SignInPage()),
                         (route) => false);
                   },
-                  child: Text(
+                  child: const Text(
                     "Sign In.",
                     style: TextStyle(
                         fontWeight: FontWeight.bold, color: primaryColor),

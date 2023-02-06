@@ -28,11 +28,11 @@ class SignInPage extends StatelessWidget {
               color: primaryColor,
             )),
             sizeVer(30),
-            FormContainerWidget(
+            const FormContainerWidget(
               hintText: "Email",
             ),
             sizeVer(15),
-            FormContainerWidget(
+            const FormContainerWidget(
               hintText: "Password",
               isPasswordField: true,
             ),
@@ -46,13 +46,13 @@ class SignInPage extends StatelessWidget {
               child: Container(),
               flex: 2,
             ),
-            Divider(
+            const Divider(
               color: secondaryColor,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   "Don't have and account? ",
                   style: TextStyle(color: primaryColor),
                 ),
@@ -60,10 +60,11 @@ class SignInPage extends StatelessWidget {
                   onTap: () {
                     Navigator.pushAndRemoveUntil(
                         context,
-                        MaterialPageRoute(builder: (context) => SignUpPage()),
+                        MaterialPageRoute(
+                            builder: (context) => const SignUpPage()),
                         (route) => false);
                   },
-                  child: Text(
+                  child: const Text(
                     "Sign Up.",
                     style: TextStyle(
                         fontWeight: FontWeight.bold, color: primaryColor),

@@ -14,13 +14,13 @@ class ProfileFormWidget extends StatelessWidget {
       children: [
         Text(
           "$title",
-          style: TextStyle(color: primaryColor, fontSize: 16),
+          style: const TextStyle(color: primaryColor, fontSize: 16),
         ),
         sizeVer(10),
         TextFormField(
           controller: controller,
-          style: TextStyle(color: primaryColor),
-          decoration: InputDecoration(
+          style: const TextStyle(color: primaryColor),
+          decoration: const InputDecoration(
               border: InputBorder.none,
               labelStyle: TextStyle(color: primaryColor)),
         ),

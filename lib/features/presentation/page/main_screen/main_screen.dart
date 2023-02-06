@@ -69,8 +69,8 @@ class _MainScreenState extends State<MainScreen> {
       body: PageView(
         controller: pageController,
         children: [
-          HomePage(),
-          SearchPage(),
+          const HomePage(),
+          const SearchPage(),
           UploadPostPage(),
           ActivityPage(),
           ProfilePage()

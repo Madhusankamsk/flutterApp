@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
         ),
         actions: [
           Padding(
-            padding: const EdgeInsets.only(right: 10.0),
+            padding: EdgeInsets.only(right: 10.0),
             child: Icon(
               MaterialCommunityIcons.facebook_messenger,
               color: primaryColor,
@@ -42,18 +42,18 @@ class HomePage extends StatelessWidget {
                     Container(
                       width: 30,
                       height: 30,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: secondaryColor, shape: BoxShape.circle),
                     ),
                     sizeHor(10),
-                    Text(
+                    const Text(
                       "Username",
                       style: TextStyle(
                           color: primaryColor, fontWeight: FontWeight.bold),
                     )
                   ],
                 ),
-                Icon(
+                const Icon(
                   Icons.more_vert,
                   color: primaryColor,
                 )
@@ -71,23 +71,23 @@ class HomePage extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.favorite,
                       color: primaryColor,
                     ),
                     sizeHor(10),
-                    Icon(
+                    const Icon(
                       Feather.message_circle,
                       color: primaryColor,
                     ),
                     sizeHor(10),
-                    Icon(
+                    const Icon(
                       Feather.send,
                       color: primaryColor,
                     ),
                   ],
                 ),
-                Icon(
+                const Icon(
                   Icons.bookmark_border,
                   color: primaryColor,
                 )
@@ -96,25 +96,25 @@ class HomePage extends StatelessWidget {
             sizeVer(10),
             Row(
               children: [
-                Text(
+                const Text(
                   "Username",
                   style: TextStyle(
                       color: primaryColor, fontWeight: FontWeight.bold),
                 ),
                 sizeHor(10),
-                Text(
+                const Text(
                   "some description",
                   style: TextStyle(color: primaryColor),
                 ),
               ],
             ),
             sizeVer(10),
-            Text(
+            const Text(
               "View all 10 comments",
               style: TextStyle(color: darkGreyColor),
             ),
             sizeVer(10),
-            Text(
+            const Text(
               "08/5/2022",
               style: TextStyle(color: darkGreyColor),
             ),
@@ -134,12 +134,12 @@ _openBottomModalSheet(BuildContext context) {
           decoration: BoxDecoration(color: backGroundColor.withOpacity(.8)),
           child: SingleChildScrollView(
             child: Container(
-              margin: EdgeInsets.symmetric(vertical: 10),
+              margin: const EdgeInsets.symmetric(vertical: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10.0),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 10.0),
                     child: Text(
                       "More Options",
                       style: TextStyle(
@@ -148,18 +148,18 @@ _openBottomModalSheet(BuildContext context) {
                           color: primaryColor),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                     color: secondaryColor,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10.0),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 10.0),
                     child: Text(
                       "Delete Post",
                       style: TextStyle(
@@ -169,7 +169,7 @@ _openBottomModalSheet(BuildContext context) {
                     ),
                   ),
                   sizeVer(7),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                     color: secondaryColor,
                   ),
@@ -181,9 +181,9 @@ _openBottomModalSheet(BuildContext context) {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => UpdatePostPage()));
+                                builder: (context) => const UpdatePostPage()));
                       },
-                      child: Text(
+                      child: const Text(
                         "Update Post",
                         style: TextStyle(
                             fontWeight: FontWeight.w500,

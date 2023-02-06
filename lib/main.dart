@@ -3,7 +3,7 @@ import 'package:pettyland/features/presentation/page/main_screen/main_screen.dar
 import 'features/presentation/page/credential/sign_up_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Instagram Clone",
       darkTheme: ThemeData.dark(),
-      home: MainScreen(),
+      home: const MainScreen(),
     );
   }
 }

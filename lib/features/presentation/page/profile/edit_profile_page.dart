@@ -11,16 +11,16 @@ class EditProfilePage extends StatelessWidget {
       backgroundColor: backGroundColor,
       appBar: AppBar(
         backgroundColor: backGroundColor,
-        title: Text("Edit Profile"),
+        title: const Text("Edit Profile"),
         leading: GestureDetector(
             onTap: () => Navigator.pop(context),
-            child: Icon(
+            child: const Icon(
               Icons.close,
               size: 32,
             )),
         actions: [
           Padding(
-            padding: const EdgeInsets.only(right: 10.0),
+            padding: EdgeInsets.only(right: 10.0),
             child: Icon(
               Icons.done,
               color: blueColor,

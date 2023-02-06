@@ -14,7 +14,7 @@ class UploadPostPage extends StatelessWidget {
             height: 150,
             decoration: BoxDecoration(
                 color: secondaryColor.withOpacity(.3), shape: BoxShape.circle),
-            child: Center(
+            child: const Center(
               child: Icon(
                 Icons.upload,
                 color: primaryColor,

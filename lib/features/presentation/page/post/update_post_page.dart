@@ -31,11 +31,11 @@ class UpdatePostPage extends StatelessWidget {
               Container(
                 width: 100,
                 height: 100,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: secondaryColor, shape: BoxShape.circle),
               ),
               sizeVer(10),
-              Text(
+              const Text(
                 "Username",
                 style: TextStyle(
                     color: primaryColor,
@@ -46,10 +46,10 @@ class UpdatePostPage extends StatelessWidget {
               Container(
                 width: double.infinity,
                 height: 200,
-                decoration: BoxDecoration(color: secondaryColor),
+                decoration: const BoxDecoration(color: secondaryColor),
               ),
               sizeVer(10),
-              ProfileFormWidget(
+              const ProfileFormWidget(
                 title: "Description",
               )
             ],
