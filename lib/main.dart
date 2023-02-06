@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pettyland/features/presentation/page/main_screen/main_screen.dart';
 import 'features/presentation/page/credential/sign_up_page.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Instagram Clone",
       darkTheme: ThemeData.dark(),
-      home: SignUpPage(),
+      home: MainScreen(),
     );
   }
 }

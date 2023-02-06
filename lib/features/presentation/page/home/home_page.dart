@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pettyland/consts.dart';
+import 'package:pettyland/features/presentation/page/post/update_post_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -122,4 +123,80 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+}
+
+_openBottomModalSheet(BuildContext context) {
+  return showModalBottomSheet(
+      context: context,
+      builder: (context) {
+        return Container(
+          height: 150,
+          decoration: BoxDecoration(color: backGroundColor.withOpacity(.8)),
+          child: SingleChildScrollView(
+            child: Container(
+              margin: EdgeInsets.symmetric(vertical: 10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10.0),
+                    child: Text(
+                      "More Options",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          color: primaryColor),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Divider(
+                    thickness: 1,
+                    color: secondaryColor,
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10.0),
+                    child: Text(
+                      "Delete Post",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                          color: primaryColor),
+                    ),
+                  ),
+                  sizeVer(7),
+                  Divider(
+                    thickness: 1,
+                    color: secondaryColor,
+                  ),
+                  sizeVer(7),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10.0),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => UpdatePostPage()));
+                      },
+                      child: Text(
+                        "Update Post",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16,
+                            color: primaryColor),
+                      ),
+                    ),
+                  ),
+                  sizeVer(7),
+                ],
+              ),
+            ),
+          ),
+        );
+      });
 }
